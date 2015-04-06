@@ -1,0 +1,117 @@
+.product {
+  @extend .bb;
+  background-color: #000;
+  font-size: 18px;
+  max-width: 520px;
+  margin: 0 0 20px;
+  min-width: 380px;
+  padding: 12px;
+  text-align: center;
+
+  .product-image {
+    background-repeat: no-repeat;
+    height: 300px;
+    margin: -140px 0 0;
+    position: relative;
+    top: 140px;
+  }
+  
+  .product-title {
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+  
+    color: #fff;
+    font-family: "Dosis-SB";
+    font-size: 30px;
+    padding: 100px 0 12px;
+    position: relative;
+  }
+  
+  .product-description {
+    margin: 0 0 12px;
+  }
+  
+  a.change-toppings {
+    font-family: "Dosis-B";
+    font-size: 16px;
+    margin: 0 0 6px;
+    text-transform: uppercase;
+  }
+  
+  .custom-drop.half {
+    float: left;
+    position: relative;
+    width: 50%;
+  }
+  
+  .custom-drop .down-arrow {
+    background-color: #fff;
+    color: #000;
+    display: inline-block;
+    font-family: monospace;
+    font-size: 40px;
+    height: 100%;
+    line-height: 2.15;
+    padding: 0 6px;
+    position: absolute;
+    right: 0;
+    z-index: 9;
+  }
+  
+  .options select {
+    -moz-appearance: none;
+    background-color: transparent;
+    border: 5px solid;
+    color: #ffffff;
+    font-family: "Dosis-B";
+    font-size: 18px;
+    padding: 12px 42px 12px 12px;
+    text-transform: uppercase;
+    
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+  
+  a.add-to-order {
+    background-color: #e5472d;
+    background-image: url("/assets/images/cart-icon.png");
+    background-position: 25px center;
+    background-repeat: no-repeat;
+    background-size: auto 50%;
+    border-radius: 200px;
+    color: #fff;
+    display: inline-block;
+    padding: 0 0 0 72px;
+    text-transform: uppercase;
+  }
+  
+  .add-to-order:hover {
+    padding: 0 0 0 205px;
+  }
+  
+  .add-to-order-text {
+    font-size: 20px;
+    left: 74px;
+    position: absolute;
+    top: 21px;
+  }
+  
+  a.add-to-order .price {
+    background-color: #2d2d2d;
+    border-radius: 200px;
+    color: #fff;
+    display: inline-block;
+    font-family: "Dosis-B";
+    font-size: 26px;
+    padding: 18px 32px;
+    position: relative;
+    right: -1px;
+    z-index: 1;
+  }
+} // END PRODUCT 

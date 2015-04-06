@@ -1,4 +1,4 @@
-<div class="store-details yep">
+<div class="store-details">
     <h3>Store Name</h3>
     <ul class="address">
         <li>3334 Lincoln Way East</li>

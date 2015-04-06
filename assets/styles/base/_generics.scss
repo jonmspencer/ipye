@@ -1,0 +1,68 @@
+.sp             { background-repeat: no-repeat; position: relative; }
+.left           { float: left; }
+.right          { float: right; }
+.hide           { display: none; }
+.cloak          { opacity: 0; }
+.center         { text-align: center; }
+.phark          { text-indent: -999em; white-space: nowrap; overflow: hidden; }
+.smallcaps      { font-variant: small-caps; }
+.underline      { text-decoration: underline; }
+.uppercase, .shout
+                { text-transform: uppercase; }
+.noSelect       { -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.bb             { box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box;-webkit-box-sizing: border-box; -khtml-box-sizing: border-box; }
+%inline-rel     { display: inline-block; position: relative; }
+.yep, .menu li, a.menu-item, label, .input-container
+                { @extend %inline-rel; }
+.teehee         { display: table; }
+.yep, .teehee, .menu li, a.menu-item, label, .input-container
+                { @extend %inline-rel; width: 100%; }
+
+@mixin element-left {
+  @extend .bb;
+  @extend .left;
+  max-width: 380px;
+  min-width: 300px;
+  width: 34%;
+}
+                
+                
+                
+.curtain        { background-color: #000; bottom: 0; height: 100%; left: 0; position: fixed; top: 0; width: 100%; z-index: 9; }
+
+.curtain:after {
+    background-image: url("../images/bg1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0.5;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.black { background-color: #000; color: #FFF; }
+
+a.x {
+    color: #ccc;
+    cursor: pointer;
+    font-family: Helvetica;
+    font-size: 24px;
+    font-weight: 100;
+    line-height: 0.6;
+    opacity: 0.6;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+
+a.x:hover {
+  color: #ccc;
+  opacity: 1;
+}
+
+

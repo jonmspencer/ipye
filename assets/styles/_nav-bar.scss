@@ -1,0 +1,93 @@
+section.left-bar {
+  @include element-left;
+  background-image: url("../images/slate.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+  //box-shadow: 0 20px 130px rgba(0, 0, 0, 0.66);
+  height: 100%;
+
+  .menu {
+    margin: 32px 0;
+    
+    a.menu-item {
+      box-sizing: border-box;
+      font-family: "Dosis-M";
+      font-size: 20px;
+      margin: 0 0 2px 32px;
+    }
+    
+    &.primary-nav {
+      
+       a.menu-item {
+        background-color: #FFF;
+        color: $callout;
+        font-family: "Dosis-SB";
+        padding: 18px 18px 18px 76px;
+        position: relative;
+        right: 0;
+        width: 348px;
+        
+        &:hover {
+          width: 95%;
+        }
+
+        .image {
+          background-position: center center;
+          background-size: cover;
+          display: inline-block;
+          height: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 60px;
+          z-index: 1;
+        }
+        
+        &.active {
+          background-color: #e5472d;
+          color: #FFFFFF;
+          font-size: 26px;
+          padding: 22px 20px 22px 90px;
+          
+          .image {
+            width: 70px;
+          }
+          
+          &:after {
+            -moz-border-bottom-colors: none;
+            -moz-border-left-colors: none;
+            -moz-border-right-colors: none;
+            -moz-border-top-colors: none;
+            border-color: rgba(229, 71, 45, 0) rgba(229, 71, 45, 0) rgba(229, 71, 45, 0) #e5472d;
+            border-image: none;
+            border-style: solid;
+            border-width: 34px;
+            content: " ";
+            height: 0;
+            left: 100%;
+            margin-top: -34px;
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            width: 0;
+          }
+          
+        } // END &.active
+    
+      } // END a
+            
+    } // END .primary-nav
+    
+    &.secondary-nav {
+      margin: 0 0 32px;
+      
+      a {
+        padding: 6px 0;
+      }
+      
+    } // END .secondary-nav
+    
+  } // END .menu
+  
+} // END .left-bar
