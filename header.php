@@ -14,6 +14,4 @@
       <?php require_once('partials/_user.php'); ?>
     </header>
     <?php require_once('partials/_nav.php'); ?>
-    <div class="right-bar">
-      <?php // require_once('partials/_cart.php'); ?>
-    </div><!-- END RIGHT BAR -->
+    <?php require_once('partials/_cart.php'); ?>

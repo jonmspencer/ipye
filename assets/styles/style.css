@@ -41,7 +41,7 @@ html, body {
 .left, header a.logo, header .user-status .welcome, header .user-status .user-nav, header .user-status .user-nav li, header .user-status .user-nav li a, section.left-bar, .store-details {
   float: left; }
 
-.right, header .user-status {
+.right, header .user-status, .cart {
   float: right; }
 
 .hide {
@@ -75,21 +75,21 @@ html, body {
   -ms-user-select: none;
   user-select: none; }
 
-.bb, section, header a.logo, section.left-bar, .store-details, .product {
+.bb, section, header a.logo, section.left-bar, section.left-bar .menu.primary-nav a.menu-item, .cart, .store-details, .product {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -khtml-box-sizing: border-box; }
 
-.yep, .menu li, a.menu-item, label, .input-container, .teehee, header, section {
+.yep, .cart .tear, .menu li, a.menu-item, label, .input-container, .teehee, header, section, .cart {
   display: inline-block;
   position: relative; }
 
 .teehee, header {
   display: table; }
 
-.yep, .teehee, header, .menu li, a.menu-item, label, .input-container {
+.yep, .cart .tear, .teehee, header, .menu li, a.menu-item, label, .input-container {
   width: 100%; }
 
 .curtain {
@@ -225,13 +225,13 @@ a.x:hover {
 /* 1.0 LAYOUT - Global Structure
 ---------------------------------------------------------------------------------------------------- */
 body {
-  font-family: 'Dosis', Helvetica, sans-serif;
+  font-family: 'Dosis-L', Helvetica, sans-serif;
   font-size: 16px; }
 
 .wrap {
   margin: 0 auto;
   position: relative;
-  width: 90%; }
+  width: 95%; }
 
 a {
   color: #d3b670;
@@ -240,29 +240,8 @@ a {
     color: #f5e4ba; }
 
 section.content {
-  padding: 2.5%;
-  width: 66%; }
-
-.cart {
-  background-color: #f4f1e9;
-  box-sizing: border-box;
-  clear: both;
-  float: right;
-  max-width: 420px;
-  min-width: 325px;
   padding: 32px;
-  width: 80%; }
-
-.cart .tear {
-  border-bottom: 4px dotted #f4f1e9;
-  left: 0;
-  position: absolute; }
-
-.cart .topTear {
-  top: -2px; }
-
-.cart .bottomTear {
-  bottom: -2px; }
+  width: 66%; }
 
 header {
   background-color: rgba(0, 0, 0, 0.2); }
@@ -278,7 +257,7 @@ header {
     height: 0;
     padding: 60px 32px; }
   header .user-status {
-    margin: 0 5% 0 0; }
+    margin: 0 2.5% 0 0; }
     header .user-status .welcome {
       color: #fff;
       font-family: "Dosis-M";
@@ -296,7 +275,6 @@ section.left-bar {
   background-image: url("../images/slate.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: contain;
   height: 100%; }
   section.left-bar .menu {
     margin: 32px 0; }
@@ -304,15 +282,15 @@ section.left-bar {
       box-sizing: border-box;
       font-family: "Dosis-M";
       font-size: 20px;
-      margin: 0 0 2px 32px; }
+      margin: 0 0 2px 10%;
+      width: 90%; }
     section.left-bar .menu.primary-nav a.menu-item {
-      background-color: #FFF;
+      background-color: #FFFFFF;
       color: #e5472d;
       font-family: "Dosis-SB";
       padding: 18px 18px 18px 76px;
       position: relative;
-      right: 0;
-      width: 348px; }
+      right: 0; }
       section.left-bar .menu.primary-nav a.menu-item:hover {
         width: 95%; }
       section.left-bar .menu.primary-nav a.menu-item .image {
@@ -327,11 +305,7 @@ section.left-bar {
         z-index: 1; }
       section.left-bar .menu.primary-nav a.menu-item.active {
         background-color: #e5472d;
-        color: #FFFFFF;
-        font-size: 26px;
-        padding: 22px 20px 22px 90px; }
-        section.left-bar .menu.primary-nav a.menu-item.active .image {
-          width: 70px; }
+        color: #FFFFFF; }
         section.left-bar .menu.primary-nav a.menu-item.active:after {
           -moz-border-bottom-colors: none;
           -moz-border-left-colors: none;
@@ -340,11 +314,11 @@ section.left-bar {
           border-color: rgba(229, 71, 45, 0) rgba(229, 71, 45, 0) rgba(229, 71, 45, 0) #e5472d;
           border-image: none;
           border-style: solid;
-          border-width: 34px;
+          border-width: 28px;
           content: " ";
           height: 0;
           left: 100%;
-          margin-top: -34px;
+          margin-top: -28px;
           pointer-events: none;
           position: absolute;
           top: 50%;
@@ -354,13 +328,31 @@ section.left-bar {
       section.left-bar .menu.secondary-nav a {
         padding: 6px 0; }
 
+.cart {
+  background-color: #f4f1e9;
+  clear: both;
+  padding: 20px;
+  position: absolute;
+  right: 2.5%;
+  top: 155px;
+  width: 320px;
+  z-index: 9; }
+  .cart .tear {
+    border-bottom: 4px dotted #f4f1e9;
+    left: 0;
+    position: absolute; }
+    .cart .tear.top {
+      top: -2px; }
+    .cart .tear.bottom {
+      bottom: -2px; }
+
 .powered-by {
   bottom: 32px;
   color: #efd214;
   font-family: "Dosis-M";
   font-size: 13px;
   position: fixed;
-  right: 5%; }
+  right: 2.5%; }
   .powered-by a {
     color: #fff;
     font-family: "Dosis-B";
@@ -387,6 +379,9 @@ section.left-bar {
 
 /* 1.3 Headings
 ---------------------------------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 20px; }
+
 h3 {
   font-family: "Dosis-M";
   font-size: 20px;
@@ -486,10 +481,12 @@ label {
   margin: 0 0 20px;
   min-width: 380px;
   padding: 12px;
-  text-align: center; }
+  text-align: center;
+  width: 50%; }
   .product .product-image {
-    background-repeat: no-repeat;
-    height: 300px;
+    background-position: center center;
+    background-size: cover;
+    height: 220px;
     margin: -140px 0 0;
     position: relative;
     top: 140px; }
@@ -557,15 +554,14 @@ label {
     border-radius: 200px;
     color: #fff;
     display: inline-block;
-    padding: 0 0 0 72px;
-    text-transform: uppercase; }
+    padding: 0 0 0 60px; }
   .product .add-to-order:hover {
-    padding: 0 0 0 205px; }
+    padding: 0 0 0 166px; }
   .product .add-to-order-text {
-    font-size: 20px;
-    left: 74px;
+    font-size: 18px;
+    left: 68px;
     position: absolute;
-    top: 21px; }
+    top: 16px; }
   .product a.add-to-order .price {
     background-color: #2d2d2d;
     border-radius: 200px;
@@ -573,21 +569,21 @@ label {
     display: inline-block;
     font-family: "Dosis-B";
     font-size: 26px;
-    padding: 18px 32px;
+    padding: 12px 32px;
     position: relative;
     right: -1px;
     z-index: 1; }
 
-/* 3.0 RESPONSIVE
----------------------------------------------------------------------------------------------------- */
 @media screen and (min-width: 1680px) {
   .product {
     float: left;
     margin: 0 2.5% 2.5% 0;
+    max-width: 420px;
     width: 44%; } }
 @media screen and (max-width: 1024px) {
   body {
-    background: green; } }
+    background: green;
+    font-size: 14px; } }
 @media screen and (max-width: 768px) {
   .mobileKill {
     display: none; }
