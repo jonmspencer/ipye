@@ -94,25 +94,6 @@ jQuery(document).ready(function($) {
       });
 
       
-      
-/*
-      function formUX() {
-        
-        // ADD PLACEHOLDER TEXT TO GRAVITY FORMS
-        $('li.gfield').each(function() {
-          var label = $(this).find('label').text().replace('*','');
-          $(this).find('.ginput_container > :first-child:not(.gfield_select)').attr('placeholder', label);
-        });
-        
-        // ADD CUSTOM DROPDOWN ARROW TO SELECT
-        $('.ginput_container > select').parent().append('<span>&blacktriangledown;</span>');
-        $('.ginput_container span').css({height:($('select').outerHeight() - 10)});
-        
-      } 
-      formUX();
-*/
-
-      
 /*
       // CLOSE MOBILE MENU 
       function closeMenu() {
