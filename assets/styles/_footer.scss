@@ -1,0 +1,39 @@
+.powered-by {
+  bottom: 32px;
+  color: #efd214;
+  font-family: "Dosis-M";
+  font-size: 13px;
+  position: fixed;
+  right: 5%;
+  
+  a {
+    color: #fff;
+    font-family: "Dosis-B";
+    font-size: 16px;
+  }
+}
+
+.store-details {
+  @include element-left;
+  
+  background-color: #363738;
+  bottom: 0;
+  display: inline-block;
+  left: 0;
+  padding: 32px;
+  position: fixed;
+  
+  ul {
+    font-family: Helvetica;
+    font-size: 13px;
+    margin: 0 0 12px;  
+    
+    &.store-nav {
+      margin: 0;
+    }
+    
+    li {
+      line-height: 160%;
+    }
+  }
+}

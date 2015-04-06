@@ -53,10 +53,6 @@
 </div><!-- END SIGNUP MODAL -->
   
   <!--
-
-
-    
-
     State<label for="lname"></label>
     <input type="text" id="state" name="state" maxlength="100">
     Zip<label for="lname"></label>

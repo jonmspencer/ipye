@@ -1,0 +1,44 @@
+header { 
+  @extend .teehee;
+  background-color: rgba(0,0,0,0.2);
+  
+  a.logo {
+    @include element-left;
+    background-color: #FFFFFF;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    display: inline-block;
+    height: 0;
+    padding: 60px 32px;
+  } // END a.logo
+  
+  .user-status {
+    @extend .right;
+    margin: 0 5% 0 0;
+    
+    .welcome {
+      @extend .left;
+      color: #fff;
+      font-family: "Dosis-M";
+      font-size: 22px;
+      padding: 48px 20px;
+    }
+    
+    .user-nav {
+      @extend .left;
+      
+      li {
+        @extend .left;
+        
+        a {
+          @extend .left;
+          @extend .shout;
+          font-family: "Dosis-B";
+          line-height: 1.5;
+          padding: 48px 20px;
+        }   
+      } // END li
+    } // END .user-nav
+  } // END .user-status
+} // END header

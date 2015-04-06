@@ -1,0 +1,292 @@
+// 0.0 BASE
+//  0.1 Resets
+//  0.2 Generics, Utilities, & Consolidations
+//  0.3 Webfonts
+
+// 1.0 LAYOUT
+//  1.1 Header Structure
+//  1.2 Footer Structure
+//  1.3 Headings
+//  1.4 Forms
+
+// 2.0 MODULES
+  // Page Specific
+
+// 3.0 RESPONSIVE
+//  3.1 Only Computer - No tablet or below
+//  3.2 Only Tablet & Above - No Mobile Phone
+//  3.3 Primary Mobile - Tablet & Below
+//  3.4 Secondary Mobile - Phone & Below
+//  3.5 iPad Only
+//  3.6 iPhone Only
+
+//4.0 Themes
+  // If Applicable
+
+
+// COLORS 
+$background: #4e4e4e;
+$callout: #e5472d; // RED
+$link: #d3b670;
+$link-hover: #f5e4ba;
+$type: #787878;
+
+// VARS 
+$tablet: 1024px;
+$phone: 768px;
+$animate-time: 0.2s;
+
+//0.0 BASE
+//----------------------------------------------------------------------------------------------------
+
+@import 'base/resets';
+@import 'base/generics';
+@import 'base/modbox';
+@import 'base/fonts';
+
+/* 1.0 LAYOUT - Global Structure
+---------------------------------------------------------------------------------------------------- */
+
+body {
+  font-family: 'Dosis', Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.wrap {
+  margin: 0 auto;
+  position: relative;
+  width: 90%;
+}
+
+a {
+  color: $link;
+  cursor: pointer;
+  
+  &:hover {
+     color: $link-hover;
+  }
+}
+
+section {
+  @extend .bb;
+  @extend %inline-rel;
+  &.content {
+    padding: 2.5%;
+    width: 66%;
+  } 
+}
+
+
+
+.cart {
+    background-color: #f4f1e9;
+    box-sizing: border-box;
+    clear: both;
+    float: right;
+    max-width: 420px;
+    min-width: 325px;
+    padding: 32px;
+    width: 80%;
+  }
+
+.cart .tear {
+    border-bottom: 4px dotted #f4f1e9;
+    left: 0;
+    position: absolute;
+}
+
+.cart .topTear {
+    top: -2px;
+}
+
+.cart .bottomTear {
+    bottom: -2px;
+}
+
+
+// 1.1 Header & Footer
+// ---------------------------------------------------------------------------------------------------- 
+
+@import 'header';
+@import 'nav-bar';
+@import 'footer';
+
+/* 1.3 Headings
+---------------------------------------------------------------------------------------------------- */
+
+h1,h2,h3,h4,h5,h6 {}
+
+h1 {}
+
+h2 {}
+
+h3 {
+    font-family: "Dosis-M";
+    font-size: 20px;
+    margin: 0 0 12px;
+}
+
+/* 1.4 Forms
+---------------------------------------------------------------------------------------------------- */
+
+::-webkit-input-placeholder {
+   color: rgba(0,0,0,0.25);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: rgba(0,0,0,0.25); 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: rgba(0,0,0,0.25);  
+}
+
+:-ms-input-placeholder {  
+   color: rgba(0,0,0,0.25);  
+}
+
+input, textarea, select, .input-container {
+    box-sizing: border-box;
+    padding: 12px;
+}
+
+form.options {
+    margin: 12px 0;
+}
+
+label {
+    font-family: "Dosis-M";
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.input-container.quarter {
+    width: 25%;
+}
+
+.input-container.half {
+  width: 50%;
+}
+
+
+
+
+
+
+
+.modal {
+  border-radius: 10px;
+  box-sizing: border-box;
+  left: 50%;
+  margin: 5% 0 0 -240px;
+  overflow: hidden;
+  position: absolute;
+  width: 480px;
+  z-index: 10;
+}
+
+.modal a.logo {
+  background-color: transparent;
+  margin: 0px;
+  padding: 80px 32px;
+}
+
+.modal-section {
+  background-color: rgba(255,255,255,0.95);
+  padding: 32px;
+}
+
+.modal-header {
+  background-color: #000;
+  background-image: url("../images/slate.png");
+  padding: 0;
+}
+
+.modal-content a {
+     color: #D9811E;
+    padding: 10px 0
+}
+
+.modal input {
+    background-color: transparent;
+    color: #222;
+    font-family: "Dosis-B";
+    font-size: 26px;
+    line-height: 160%;
+    padding: 0;
+    width: 100%;
+}
+
+.modal-section > input[type="submit"] {
+    background-color: #e5472d;
+    border-radius: 206px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-family: "Dosis-M";
+    font-size: 20px;
+    margin: 32px auto 0;
+    min-width: 240px;
+    padding: 12px 42px;
+    text-align: center;
+    text-transform: uppercase;
+    width: auto;
+}
+
+
+// 2.0 MODULES - Page Specific
+// ----------------------------------------------------------------------------------------------------
+
+@import 'product';
+
+/* 3.0 RESPONSIVE
+---------------------------------------------------------------------------------------------------- */
+
+// 3.1 Big Computer - No tablet or below
+@media screen and (min-width: 1680px){
+  .product {
+    float: left;
+    margin: 0 2.5% 2.5% 0;
+    width: 44%;
+  }
+}
+
+// 3.1 Only Computer - No tablet or below
+// @media screen and (min-width: 1024px){}
+
+// 3.2 Only Tablet & Above - No Mobile Phone
+// @media screen and (min-width: 800px){}
+
+// 3.3 Primary Mobile - Tablet & Below
+@media screen and (max-width: $tablet){
+  body {
+    background: green;
+  }
+}
+
+// 3.4 Secondary Mobile - Phone & Below
+@media screen and (max-width: $phone){
+  
+  .mobileKill {
+    display: none;
+  }
+  
+  body {
+    padding: 0;
+  }
+  
+  .modal {
+    left: 0;
+    margin: 5% auto;
+    max-width: 480px;
+    position: relative;
+    width: 90%;
+  }
+}
+
+// 3.5 iPad Only
+// @media only screen and (min-device-width: 768px) and (max-device-width: 1024px){}
+
+// 3.6 iPhone Only
+// @media only screen and (max-device-width: 480px){}
