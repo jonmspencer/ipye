@@ -7,7 +7,8 @@ html, body {
     height: 100%;
     min-width: 320px;
 }
-*, a, input, button, textarea, select, .animate, a.menu-item .image
+%animate        { -webkit-transition: all $animate-time ease-in-out; -moz-transition: all $animate-time ease-in-out; -o-transition: all $animate-time ease-in-out; }
+a, input, button, textarea, select, .animate, a.menu-item .image
                 { -webkit-transition: all $animate-time ease-in-out; -moz-transition: all $animate-time ease-in-out; -o-transition: all $animate-time ease-in-out; -webkit-appearance: none; border-radius: 0; }
 ::selection     { background: $callout; color: #FFF; }
 ::-moz-selection{ background: $callout; color: #FFF; }

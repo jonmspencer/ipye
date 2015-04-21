@@ -19,7 +19,7 @@ html, body {
   height: 100%;
   min-width: 320px; }
 
-*, a, input, button, textarea, select, .animate, a.menu-item .image {
+a, input, button, textarea, select, .animate, a.menu-item .image {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -50,7 +50,7 @@ html, body {
 .cloak {
   opacity: 0; }
 
-.center {
+.center, .product {
   text-align: center; }
 
 .phark {
@@ -75,21 +75,24 @@ html, body {
   -ms-user-select: none;
   user-select: none; }
 
-.bb, section, header a.logo, section.left-bar, section.left-bar .menu.primary-nav a.menu-item, .cart, .store-details, .product {
+.bb, section, header a.logo, section.left-bar, section.left-bar .menu.primary-nav a.menu-item, .cart, .store-details, input, textarea, select, .input-container, .modal-header a.logo, .product {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -khtml-box-sizing: border-box; }
 
-.yep, .cart .tear, .menu li, a.menu-item, label, .input-container, .teehee, header, section, .cart {
+.yep, .cart .tear, .modal-header a.logo, .menu li, a.menu-item, label, .input-container, .teehee, header, section, .cart {
   display: inline-block;
   position: relative; }
+
+.product .custom-drop .down-arrow {
+  pointer-events: none; }
 
 .teehee, header {
   display: table; }
 
-.yep, .cart .tear, .teehee, header, .menu li, a.menu-item, label, .input-container {
+.yep, .cart .tear, .modal-header a.logo, .teehee, header, .menu li, a.menu-item, label, .input-container {
   width: 100%; }
 
 .curtain {
@@ -228,6 +231,18 @@ body {
   font-family: 'Dosis-L', Helvetica, sans-serif;
   font-size: 16px; }
 
+body:before {
+  background-image: url("../images/bg1.jpg");
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  opacity: 0.1;
+  position: fixed; }
+
 .wrap {
   margin: 0 auto;
   position: relative;
@@ -292,7 +307,7 @@ section.left-bar {
       position: relative;
       right: 0; }
       section.left-bar .menu.primary-nav a.menu-item:hover {
-        width: 95%; }
+        left: 5%; }
       section.left-bar .menu.primary-nav a.menu-item .image {
         background-position: center center;
         background-size: cover;
@@ -336,7 +351,7 @@ section.left-bar {
   right: 2.5%;
   top: 155px;
   width: 320px;
-  z-index: 9; }
+  z-index: 8; }
   .cart .tear {
     border-bottom: 4px dotted #f4f1e9;
     left: 0;
@@ -404,7 +419,7 @@ h3 {
   color: rgba(0, 0, 0, 0.25); }
 
 input, textarea, select, .input-container {
-  box-sizing: border-box;
+  border: none;
   padding: 12px; }
 
 form.options {
@@ -445,6 +460,13 @@ label {
   background-color: #000;
   background-image: url("../images/slate.png");
   padding: 0; }
+  .modal-header a.logo {
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0;
+    padding: 60px 32px; }
 
 .modal-content a {
   color: #D9811E;
@@ -476,12 +498,10 @@ label {
 
 .product {
   background-color: #000;
-  font-size: 18px;
   max-width: 520px;
   margin: 0 0 20px;
   min-width: 380px;
   padding: 12px;
-  text-align: center;
   width: 50%; }
   .product .product-image {
     background-position: center center;
@@ -514,7 +534,6 @@ label {
     margin: 0 0 12px; }
   .product a.change-toppings {
     font-family: "Dosis-B";
-    font-size: 16px;
     margin: 0 0 6px;
     text-transform: uppercase; }
   .product .custom-drop.half {
@@ -532,7 +551,7 @@ label {
     padding: 0 6px;
     position: absolute;
     right: 0;
-    z-index: 9; }
+    z-index: 8; }
   .product .options select {
     -moz-appearance: none;
     background-color: transparent;

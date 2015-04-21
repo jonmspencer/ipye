@@ -53,6 +53,19 @@ body {
   font-size: 16px;
 }
 
+body:before {
+  background-image: url("../images/bg1.jpg");
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  opacity: 0.1;
+  position: fixed;
+}
+
 .wrap {
   margin: 0 auto;
   position: relative;
@@ -122,8 +135,9 @@ h3 {
 }
 
 input, textarea, select, .input-container {
-    box-sizing: border-box;
-    padding: 12px;
+  @extend .bb;
+  border: none;
+  padding: 12px;
 }
 
 form.options {
@@ -177,11 +191,23 @@ label {
   background-color: #000;
   background-image: url("../images/slate.png");
   padding: 0;
+  
+  a.logo {
+    @extend .bb;
+    @extend .yep;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0;
+    padding: 60px 32px;
+  }
+  
 }
 
 .modal-content a {
-     color: #D9811E;
-    padding: 10px 0
+  color: #D9811E;
+  padding: 10px 0
 }
 
 .modal input {
