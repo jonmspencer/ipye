@@ -22,9 +22,9 @@
 @mixin element-left {
   @extend .bb;
   @extend .left;
-  max-width: 380px;
-  min-width: 300px;
-  width: 34%;
+  left: 0;
+  position: absolute;
+  width: 320px;
 }
                 
                 
@@ -44,7 +44,7 @@
     top: 0;
 }
 
-.black { background-color: #000; color: #FFF; }
+.black { background-color: $product-bg; color: $background-alt; }
 
 a.x {
     color: #ccc;

@@ -1,15 +1,16 @@
 header { 
   @extend .teehee;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba($product-bg, 0.2);
   
   a.logo {
     @include element-left;
-    background-color: #FFFFFF;
+    background-color: $background-alt;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 50% auto;
     display: inline-block;
     height: 0;
+    left: -320px;
     padding: 60px 32px;
   } // END a.logo
   
@@ -19,7 +20,7 @@ header {
     
     .welcome {
       @extend .left;
-      color: #fff;
+      color: $background-alt;
       font-family: "Dosis-M";
       font-size: 22px;
       padding: 48px 20px;

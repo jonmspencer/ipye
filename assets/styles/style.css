@@ -82,7 +82,7 @@ a, input, button, textarea, select, .animate, a.menu-item .image {
   -webkit-box-sizing: border-box;
   -khtml-box-sizing: border-box; }
 
-.yep, .cart .tear, .modal-header a.logo, .menu li, a.menu-item, label, .input-container, .teehee, header, section, .cart {
+.yep, section, .cart .tear, .modal-header a.logo, .menu li, a.menu-item, label, .input-container, .teehee, header, .cart {
   display: inline-block;
   position: relative; }
 
@@ -92,7 +92,7 @@ a, input, button, textarea, select, .animate, a.menu-item .image {
 .teehee, header {
   display: table; }
 
-.yep, .cart .tear, .modal-header a.logo, .teehee, header, .menu li, a.menu-item, label, .input-container {
+.yep, section, .cart .tear, .modal-header a.logo, .teehee, header, .menu li, a.menu-item, label, .input-container {
   width: 100%; }
 
 .curtain {
@@ -118,8 +118,8 @@ a, input, button, textarea, select, .animate, a.menu-item .image {
   top: 0; }
 
 .black {
-  background-color: #000;
-  color: #FFF; }
+  background-color: #000000;
+  color: #FFFFFF; }
 
 a.x {
   color: #ccc;
@@ -229,7 +229,8 @@ a.x:hover {
 ---------------------------------------------------------------------------------------------------- */
 body {
   font-family: 'Dosis-L', Helvetica, sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  padding: 0 0 0 320px; }
 
 body:before {
   background-image: url("../images/bg1.jpg");
@@ -255,26 +256,26 @@ a {
     color: #f5e4ba; }
 
 section.content {
-  padding: 32px;
-  width: 66%; }
+  padding: 32px; }
 
 header {
   background-color: rgba(0, 0, 0, 0.2); }
   header a.logo {
-    max-width: 380px;
-    min-width: 300px;
-    width: 34%;
+    left: 0;
+    position: absolute;
+    width: 320px;
     background-color: #FFFFFF;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 50% auto;
     display: inline-block;
     height: 0;
+    left: -320px;
     padding: 60px 32px; }
   header .user-status {
     margin: 0 2.5% 0 0; }
     header .user-status .welcome {
-      color: #fff;
+      color: #FFFFFF;
       font-family: "Dosis-M";
       font-size: 22px;
       padding: 48px 20px; }
@@ -284,9 +285,9 @@ header {
       padding: 48px 20px; }
 
 section.left-bar {
-  max-width: 380px;
-  min-width: 300px;
-  width: 34%;
+  left: 0;
+  position: absolute;
+  width: 320px;
   background-image: url("../images/slate.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -306,8 +307,6 @@ section.left-bar {
       padding: 18px 18px 18px 76px;
       position: relative;
       right: 0; }
-      section.left-bar .menu.primary-nav a.menu-item:hover {
-        left: 5%; }
       section.left-bar .menu.primary-nav a.menu-item .image {
         background-position: center center;
         background-size: cover;
@@ -326,7 +325,7 @@ section.left-bar {
           -moz-border-left-colors: none;
           -moz-border-right-colors: none;
           -moz-border-top-colors: none;
-          border-color: rgba(229, 71, 45, 0) rgba(229, 71, 45, 0) rgba(229, 71, 45, 0) #e5472d;
+          border-color: transparent transparent transparent #e5472d;
           border-image: none;
           border-style: solid;
           border-width: 28px;
@@ -346,6 +345,8 @@ section.left-bar {
 .cart {
   background-color: #f4f1e9;
   clear: both;
+  max-width: 380px;
+  min-width: 320px;
   padding: 20px;
   position: absolute;
   right: 2.5%;
@@ -374,9 +375,9 @@ section.left-bar {
     font-size: 16px; }
 
 .store-details {
-  max-width: 380px;
-  min-width: 300px;
-  width: 34%;
+  left: 0;
+  position: absolute;
+  width: 320px;
   background-color: #363738;
   bottom: 0;
   display: inline-block;
@@ -409,14 +410,14 @@ h3 {
 
 :-moz-placeholder {
   /* Firefox 18- */
-  color: rgba(0, 0, 0, 0.25); }
+  color: rgba(120, 120, 120, 0.6); }
 
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: rgba(0, 0, 0, 0.25); }
+  color: rgba(120, 120, 120, 0.6); }
 
 :-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.25); }
+  color: rgba(120, 120, 120, 0.6); }
 
 input, textarea, select, .input-container {
   border: none;
@@ -464,7 +465,7 @@ label {
     background-color: transparent;
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto 70%;
     margin: 0;
     padding: 60px 32px; }
 
@@ -484,7 +485,7 @@ label {
 .modal-section > input[type="submit"] {
   background-color: #e5472d;
   border-radius: 206px;
-  color: #fff;
+  color: #FFFFFF;
   cursor: pointer;
   display: block;
   font-family: "Dosis-M";

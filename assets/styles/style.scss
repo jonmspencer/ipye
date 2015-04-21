@@ -23,13 +23,14 @@
 //4.0 Themes
   // If Applicable
 
-
 // COLORS 
 $background: #4e4e4e;
+$background-alt: #FFFFFF; 
 $callout: #e5472d; // RED
 $link: #d3b670;
 $link-hover: #f5e4ba;
 $paper: #f4f1e9;
+$product-bg: #000000;
 $type: #787878;
 
 // VARS 
@@ -51,6 +52,7 @@ $animate-time: 0.2s;
 body {
   font-family: 'Dosis-L', Helvetica, sans-serif;
   font-size: 16px;
+  padding: 0 0 0 320px;
 }
 
 body:before {
@@ -83,10 +85,9 @@ a {
 
 section {
   @extend .bb;
-  @extend %inline-rel;
+  @extend .yep;
   &.content {
-    padding: 32px ;
-    width: 66%;
+    padding: 32px;
   } 
 }
 
@@ -123,15 +124,15 @@ h3 {
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: rgba(0,0,0,0.25); 
+   color: rgba($type, 0.6); 
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: rgba(0,0,0,0.25);  
+   color: rgba($type, 0.6);   
 }
 
 :-ms-input-placeholder {  
-   color: rgba(0,0,0,0.25);  
+   color: rgba($type, 0.6);   
 }
 
 input, textarea, select, .input-container {
@@ -198,7 +199,7 @@ label {
     background-color: transparent;
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto 70%;
     margin: 0;
     padding: 60px 32px;
   }
@@ -223,7 +224,7 @@ label {
 .modal-section > input[type="submit"] {
     background-color: #e5472d;
     border-radius: 206px;
-    color: #fff;
+    color: $background-alt;
     cursor: pointer;
     display: block;
     font-family: "Dosis-M";
