@@ -4,8 +4,7 @@
   $count = count($name_array);
   $page_name = $name_array[$count-1];
 ?>
-<section class="left-bar">
-  
+<section class="left-bar"> 
   <ul class="yep menu primary-nav">
     <li>
       <a class="menu-item <?php echo ($page_name=='specialty-pizzas.php')?'active':'';?>" href="specialty-pizzas.php" title="Specialty Pizzas">
@@ -28,5 +27,4 @@
       <a class="menu-item" href="#">Online Coupons</a>
     </li>
   </ul>
-  <?php require_once '_store-details.php';?>
 </section>

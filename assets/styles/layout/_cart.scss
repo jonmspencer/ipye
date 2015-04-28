@@ -26,3 +26,17 @@
   } // END .tear
 
 } // END .cart
+
+// Primary Mobile - Tablet & Below
+@media screen and (max-width: $tablet){ 
+  .cart { 
+    display: none;
+  } 
+}
+
+// Secondary Mobile  
+@media screen and (max-width: $phone){ 
+  .left-bar { 
+    display: none;
+  } 
+}

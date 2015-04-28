@@ -82,22 +82,22 @@
   a.add-to-order {
     background-color: #e5472d;
     background-image: url("/assets/images/cart-icon.png");
-    background-position: 25px center;
+    background-position: 20px center;
     background-repeat: no-repeat;
     background-size: auto 50%;
     border-radius: 200px;
     color: #fff;
     display: inline-block;
-    padding: 0 0 0 60px;
+    padding: 0 0 0 52px;
   }
   
   .add-to-order:hover {
-    padding: 0 0 0 166px;
+    padding: 0 0 0 157px;
   }
   
   .add-to-order-text {
     font-size: 18px;
-    left: 68px;
+    left: 63px;
     position: absolute;
     top: 16px;
   }
@@ -109,19 +109,39 @@
     display: inline-block;
     font-family: "Dosis-B";
     font-size: 26px;
-    padding: 12px 32px;
+    padding: 12px 22px;
     position: relative;
     right: -1px;
     z-index: 1;
   }
 } // END PRODUCT 
 
-// 3.1 Big Computer - No tablet or below
+// Big Computer - No tablet or below
 @media screen and (min-width: 1680px){
   .product {
     float: left;
     margin: 0 2.5% 2.5% 0;
     max-width: 420px;
     width: 44%;
+  }
+}
+
+// Primary Mobile - Tablet & Below
+// @media screen and (max-width: $tablet){
+
+  
+// }
+
+// Secondary Mobile - Phone & Below
+@media screen and (max-width: $phone){
+  .product {
+    float: none;
+    max-width: 100%;
+    min-width: auto;
+    width: 100%;
+    
+    .options select {
+      font-size: 16px;  
+    }  
   }
 }

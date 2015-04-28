@@ -43,3 +43,22 @@ header {
     } // END .user-nav
   } // END .user-status
 } // END header
+
+// 3.4 Secondary Mobile - Phone & Below
+@media screen and (max-width: $phone){ 
+  header {
+    position: fixed;
+    z-index: 7;
+    
+    a.logo {
+      background-size: auto 60px;
+      left: 0;
+      width: 100%;
+    }
+    
+    .user-status { 
+      display: none;
+    }
+      
+  }  
+}

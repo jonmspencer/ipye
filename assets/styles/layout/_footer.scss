@@ -37,3 +37,20 @@
     }
   }
 }
+
+// Secondary Mobile  
+@media screen and (max-width: $phone){ 
+  .store-details, .powered-by {
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 100%;
+  }
+
+  .powered-by { 
+    margin: 32px 0 0;
+    padding: 32px;
+    right: 0;
+  }
+}
