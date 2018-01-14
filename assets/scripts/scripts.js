@@ -8,7 +8,6 @@ jQuery(document).ready(function($) {
 	var android 	= (navigator.platform.indexOf("android")>=0);
 	var winHeight   = $(window).height();
 	var docHeight   = $(document).height();
-	var footHeight  = $('#footer').outerHeight();
 	(function($){ // START IT UP
 		if(iOS || android) {
 		    window.scrollTo(0, 1);
@@ -147,7 +146,7 @@ jQuery(document).ready(function($) {
         } // END PRIMARY MOBILE RESIZE
         
 				// SECONDARY MOBILE RESIZE
-				if($(window).width() > 800) {}
+				// if($(window).width() > 800) {}
   				
 
 				

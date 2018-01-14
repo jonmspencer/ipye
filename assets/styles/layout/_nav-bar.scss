@@ -3,8 +3,6 @@ section.left-bar {
   background-image: url("../images/slate.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: contain;
-  //box-shadow: 0 20px 130px rgba(0, 0, 0, 0.66);
   height: 100%;
 
   .menu {
@@ -14,22 +12,23 @@ section.left-bar {
       box-sizing: border-box;
       font-family: "Dosis-M";
       font-size: 20px;
-      margin: 0 0 2px 32px;
+      margin: 0 0 2px 10%;
+      width: 90%;
     }
     
     &.primary-nav {
       
        a.menu-item {
-        background-color: #FFF;
+        @extend .bb;
+        background-color: $background-alt;
         color: $callout;
         font-family: "Dosis-SB";
         padding: 18px 18px 18px 76px;
         position: relative;
         right: 0;
-        width: 348px;
         
         &:hover {
-          width: 95%;
+          //left: 5%;
         }
 
         .image {
@@ -45,28 +44,22 @@ section.left-bar {
         }
         
         &.active {
-          background-color: #e5472d;
-          color: #FFFFFF;
-          font-size: 26px;
-          padding: 22px 20px 22px 90px;
-          
-          .image {
-            width: 70px;
-          }
+          background-color: $callout;
+          color: $background-alt;
           
           &:after {
             -moz-border-bottom-colors: none;
             -moz-border-left-colors: none;
             -moz-border-right-colors: none;
             -moz-border-top-colors: none;
-            border-color: rgba(229, 71, 45, 0) rgba(229, 71, 45, 0) rgba(229, 71, 45, 0) #e5472d;
+            border-color: transparent transparent transparent $callout;
             border-image: none;
             border-style: solid;
-            border-width: 34px;
+            border-width: 28px;
             content: " ";
             height: 0;
             left: 100%;
-            margin-top: -34px;
+            margin-top: -28px;
             pointer-events: none;
             position: absolute;
             top: 50%;

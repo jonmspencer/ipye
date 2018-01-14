@@ -1,25 +1,26 @@
 header { 
   @extend .teehee;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba($product-bg, 0.2);
   
   a.logo {
     @include element-left;
-    background-color: #FFFFFF;
+    background-color: $background-alt;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 50% auto;
     display: inline-block;
     height: 0;
+    left: -320px;
     padding: 60px 32px;
   } // END a.logo
   
   .user-status {
     @extend .right;
-    margin: 0 5% 0 0;
+    margin: 0 2.5% 0 0;
     
     .welcome {
       @extend .left;
-      color: #fff;
+      color: $background-alt;
       font-family: "Dosis-M";
       font-size: 22px;
       padding: 48px 20px;
@@ -42,3 +43,22 @@ header {
     } // END .user-nav
   } // END .user-status
 } // END header
+
+// 3.4 Secondary Mobile - Phone & Below
+@media screen and (max-width: $phone){ 
+  header {
+    position: fixed;
+    z-index: 7;
+    
+    a.logo {
+      background-size: auto 60px;
+      left: 0;
+      width: 100%;
+    }
+    
+    .user-status { 
+      display: none;
+    }
+      
+  }  
+}

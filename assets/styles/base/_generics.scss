@@ -12,6 +12,7 @@
 .noSelect       { -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 .bb             { box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box;-webkit-box-sizing: border-box; -khtml-box-sizing: border-box; }
 %inline-rel     { display: inline-block; position: relative; }
+%pointer-events { pointer-events: none; }
 .yep, .menu li, a.menu-item, label, .input-container
                 { @extend %inline-rel; }
 .teehee         { display: table; }
@@ -21,14 +22,14 @@
 @mixin element-left {
   @extend .bb;
   @extend .left;
-  max-width: 380px;
-  min-width: 300px;
-  width: 34%;
+  left: 0;
+  position: absolute;
+  width: 320px;
 }
                 
                 
                 
-.curtain        { background-color: #000; bottom: 0; height: 100%; left: 0; position: fixed; top: 0; width: 100%; z-index: 9; }
+.curtain { background-color: #000; bottom: 0; height: 100%; left: 0; position: fixed; top: 0; width: 100%; z-index: 9; }
 
 .curtain:after {
     background-image: url("../images/bg1.jpg");
@@ -43,7 +44,7 @@
     top: 0;
 }
 
-.black { background-color: #000; color: #FFF; }
+.black { background-color: $product-bg; color: $background-alt; }
 
 a.x {
     color: #ccc;

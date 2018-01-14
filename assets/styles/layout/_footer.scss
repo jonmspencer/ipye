@@ -4,7 +4,7 @@
   font-family: "Dosis-M";
   font-size: 13px;
   position: fixed;
-  right: 5%;
+  right: 2.5%;
   
   a {
     color: #fff;
@@ -35,5 +35,22 @@
     li {
       line-height: 160%;
     }
+  }
+}
+
+// Secondary Mobile  
+@media screen and (max-width: $phone){ 
+  .store-details, .powered-by {
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 100%;
+  }
+
+  .powered-by { 
+    margin: 32px 0 0;
+    padding: 32px;
+    right: 0;
   }
 }

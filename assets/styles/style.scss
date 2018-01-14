@@ -23,16 +23,18 @@
 //4.0 Themes
   // If Applicable
 
-
 // COLORS 
 $background: #4e4e4e;
+$background-alt: #FFFFFF; 
 $callout: #e5472d; // RED
 $link: #d3b670;
 $link-hover: #f5e4ba;
+$paper: #f4f1e9;
+$product-bg: #000000;
 $type: #787878;
 
 // VARS 
-$tablet: 1024px;
+$tablet: 1180px;
 $phone: 768px;
 $animate-time: 0.2s;
 
@@ -48,14 +50,28 @@ $animate-time: 0.2s;
 ---------------------------------------------------------------------------------------------------- */
 
 body {
-  font-family: 'Dosis', Helvetica, sans-serif;
+  font-family: 'Dosis-L', Helvetica, sans-serif;
   font-size: 16px;
+  padding: 0 0 0 320px;
+}
+
+body:before {
+  background-image: url("../images/bg1.jpg");
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  opacity: 0.1;
+  position: fixed;
 }
 
 .wrap {
   margin: 0 auto;
   position: relative;
-  width: 90%;
+  width: 95%;
 }
 
 a {
@@ -69,61 +85,35 @@ a {
 
 section {
   @extend .bb;
-  @extend %inline-rel;
+  @extend .yep;
   &.content {
-    padding: 2.5%;
-    width: 66%;
+    padding: 32px;
   } 
 }
-
-
-
-.cart {
-    background-color: #f4f1e9;
-    box-sizing: border-box;
-    clear: both;
-    float: right;
-    max-width: 420px;
-    min-width: 325px;
-    padding: 32px;
-    width: 80%;
-  }
-
-.cart .tear {
-    border-bottom: 4px dotted #f4f1e9;
-    left: 0;
-    position: absolute;
-}
-
-.cart .topTear {
-    top: -2px;
-}
-
-.cart .bottomTear {
-    bottom: -2px;
-}
-
 
 // 1.1 Header & Footer
 // ---------------------------------------------------------------------------------------------------- 
 
 @import 'layout/header';
 @import 'layout/nav-bar';
+@import 'layout/cart';
 @import 'layout/footer';
 
 /* 1.3 Headings
 ---------------------------------------------------------------------------------------------------- */
 
-h1,h2,h3,h4,h5,h6 {}
+h1,h2,h3,h4,h5,h6 {
+  margin: 0 0 20px;
+}
 
 h1 {}
 
 h2 {}
 
 h3 {
-    font-family: "Dosis-M";
-    font-size: 20px;
-    margin: 0 0 12px;
+  font-family: "Dosis-M";
+  font-size: 20px;
+  margin: 0 0 12px;
 }
 
 /* 1.4 Forms
@@ -134,20 +124,21 @@ h3 {
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: rgba(0,0,0,0.25); 
+   color: rgba($type, 0.6); 
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: rgba(0,0,0,0.25);  
+   color: rgba($type, 0.6);   
 }
 
 :-ms-input-placeholder {  
-   color: rgba(0,0,0,0.25);  
+   color: rgba($type, 0.6);   
 }
 
 input, textarea, select, .input-container {
-    box-sizing: border-box;
-    padding: 12px;
+  @extend .bb;
+  border: none;
+  padding: 12px;
 }
 
 form.options {
@@ -201,11 +192,23 @@ label {
   background-color: #000;
   background-image: url("../images/slate.png");
   padding: 0;
+  
+  a.logo {
+    @extend .bb;
+    @extend .yep;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 70%;
+    margin: 0;
+    padding: 60px 32px;
+  }
+  
 }
 
 .modal-content a {
-     color: #D9811E;
-    padding: 10px 0
+  color: #D9811E;
+  padding: 10px 0
 }
 
 .modal input {
@@ -221,7 +224,7 @@ label {
 .modal-section > input[type="submit"] {
     background-color: #e5472d;
     border-radius: 206px;
-    color: #fff;
+    color: $background-alt;
     cursor: pointer;
     display: block;
     font-family: "Dosis-M";
@@ -240,17 +243,8 @@ label {
 
 @import 'modules/product';
 
-/* 3.0 RESPONSIVE
----------------------------------------------------------------------------------------------------- */
-
-// 3.1 Big Computer - No tablet or below
-@media screen and (min-width: 1680px){
-  .product {
-    float: left;
-    margin: 0 2.5% 2.5% 0;
-    width: 44%;
-  }
-}
+// 3.0 RESPONSIVE
+// ----------------------------------------------------------------------------------------------------
 
 // 3.1 Only Computer - No tablet or below
 // @media screen and (min-width: 1024px){}
@@ -261,12 +255,16 @@ label {
 // 3.3 Primary Mobile - Tablet & Below
 @media screen and (max-width: $tablet){
   body {
-    background: green;
+    font-size: 14px;
   }
+  
 }
 
-// 3.4 Secondary Mobile - Phone & Below
-@media screen and (max-width: $phone){
+// Secondary Mobile  
+@media screen and (max-width: $phone){ 
+  section.content {
+    padding: 150px 20px 20px;
+  } 
   
   .mobileKill {
     display: none;
